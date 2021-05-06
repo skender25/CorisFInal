@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<FacturaElectronica xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronica" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Clave>50610022000310202062900700001010000002227100100220</Clave>
+  <CodigoActividad>552004</CodigoActividad>
+  <NumeroConsecutivo>00700001010000002227</NumeroConsecutivo>
+  <FechaEmision>2020-02-10T12:01:25-06:00</FechaEmision>
+  <Emisor>
+    <Nombre>RESTAURANTES SUBS S.R.L.</Nombre>
+    <Identificacion>
+      <Tipo>02</Tipo>
+      <Numero>3102020629</Numero>
+    </Identificacion>
+    <NombreComercial>RESTAURANTES SUBS S.R.L.</NombreComercial>
+    <Ubicacion>
+      <Provincia>1</Provincia>
+      <Canton>15</Canton>
+      <Distrito>01</Distrito>
+      <Barrio>21</Barrio>
+      <OtrasSenas>Los Yoses, Del Bar Restaurante RIO 75mts al este</OtrasSenas>
+    </Ubicacion>
+    <Telefono>
+      <CodigoPais>506</CodigoPais>
+      <NumTelefono>40529400</NumTelefono>
+    </Telefono>
+    <CorreoElectronico>info@subwaycostarica.com</CorreoElectronico>
+  </Emisor>
+  <Receptor>
+    <Nombre>ALEXANDER HERNANDEZ HERRERA</Nombre>
+    <Identificacion>
+      <Tipo>01</Tipo>
+      <Numero>116040101</Numero>
+    </Identificacion>
+    <Ubicacion>
+      <Provincia>1</Provincia>
+      <Canton>08</Canton>
+      <Distrito>03</Distrito>
+      <OtrasSenas>calle blancos</OtrasSenas>
+    </Ubicacion>
+    <Telefono>
+      <CodigoPais>506</CodigoPais>
+      <NumTelefono>83273430</NumTelefono>
+    </Telefono>
+    <CorreoElectronico>alex2595h@gmail.com</CorreoElectronico>
+  </Receptor>
+  <CondicionVenta>01</CondicionVenta>
+  <PlazoCredito>0</PlazoCredito>
+  <MedioPago>01</MedioPago>
+  <DetalleServicio>
+    <LineaDetalle>
+      <NumeroLinea>1</NumeroLinea>
+      <CodigoComercial>
+        <Tipo>99</Tipo>
+        <Codigo>00243</Codigo>
+      </CodigoComercial>
+      <Cantidad>1</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>PIZZA SUB 6</Detalle>
+      <PrecioUnitario>1592.9200</PrecioUnitario>
+      <MontoTotal>1592.9200</MontoTotal>
+      <Descuento>
+        <MontoDescuento>0.0000</MontoDescuento>
+        <NaturalezaDescuento>0</NaturalezaDescuento>
+      </Descuento>
+      <SubTotal>1592.9200</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <CodigoTarifa>08</CodigoTarifa>
+        <Tarifa>13.00 </Tarifa>
+        <Monto>207.0800</Monto>
+      </Impuesto>
+      <MontoTotalLinea>1800.0000</MontoTotalLinea>
+    </LineaDetalle>
+    <LineaDetalle>
+      <NumeroLinea>2</NumeroLinea>
+      <CodigoComercial>
+        <Tipo>99</Tipo>
+        <Codigo>11011</Codigo>
+      </CodigoComercial>
+      <Cantidad>1</Cantidad>
+      <UnidadMedida>Unid</UnidadMedida>
+      <Detalle>CBO. GALLETA</Detalle>
+      <PrecioUnitario>1150.4400</PrecioUnitario>
+      <MontoTotal>1150.4400</MontoTotal>
+      <Descuento>
+        <MontoDescuento>0.0000</MontoDescuento>
+        <NaturalezaDescuento>0</NaturalezaDescuento>
+      </Descuento>
+      <SubTotal>1150.4400</SubTotal>
+      <Impuesto>
+        <Codigo>01</Codigo>
+        <CodigoTarifa>08</CodigoTarifa>
+        <Tarifa>13.00 </Tarifa>
+        <Monto>149.5600</Monto>
+      </Impuesto>
+      <MontoTotalLinea>1300.0000</MontoTotalLinea>
+    </LineaDetalle>
+  </DetalleServicio>
+  <ResumenFactura>
+    <CodigoTipoMoneda>
+      <CodigoMoneda>CRC</CodigoMoneda>
+      <TipoCambio>572.69</TipoCambio>
+    </CodigoTipoMoneda>
+    <TotalServGravados>0.0000</TotalServGravados>
+    <TotalServExentos>0.0000</TotalServExentos>
+    <TotalMercanciasGravadas>2743.3600</TotalMercanciasGravadas>
+    <TotalMercanciasExentas>0.0000</TotalMercanciasExentas>
+    <TotalGravado>2743.3600</TotalGravado>
+    <TotalExento>0.0000</TotalExento>
+    <TotalVenta>2743.3600</TotalVenta>
+    <TotalDescuentos>0.0000</TotalDescuentos>
+    <TotalVentaNeta>2743.3600</TotalVentaNeta>
+    <TotalImpuesto>356.6400</TotalImpuesto>
+    <TotalComprobante>3100.0000</TotalComprobante>
+  </ResumenFactura>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-3c14f991-9d45-448a-948c-291d3bd92a68">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+      <ds:Reference Id="Reference-80a6486a-d00c-4728-baee-300f075df845" URI="">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <ds:DigestValue>02ZKWIGE13nqCWDHSRhc6pl5P1UdGzKIGWy70FmeqF8=</ds:DigestValue>
+      </ds:Reference>
+      <ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-Signature-3c14f991-9d45-448a-948c-291d3bd92a68">
+        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <ds:DigestValue>aPwOYeQXxRqMMLTyCNoqR9b2CLpO5dTacbQO5gzsAS4=</ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue Id="SignatureValue-3c14f991-9d45-448a-948c-291d3bd92a68">iWxp6McS7m67JipzsJwmjDnYJXvK92dFJjksIIA+XvBa8JhfEXBpQPBaCzIiH606eMd1BOJApUoZeH+YkkyEFVfvrP5zYQOSWxjQb5hmWwbu7C9F3f97WuuHHouZIw3CFdg8a9bWz5+ASNqBlk/ix2LkAHVb64syFSAx5vVkHc3JPfuZfrDX9FNW28Beh0l36dmpllLxAFlptdNPh7VDUoeCb52QsvPTSo9K3sZu3e+sKRjv3+n1eNdNMY+ZQtbsYeY8/4+xu9wFdUKaM/GLBmQxiS6yjBGwZt08EAVjlSA3uGPR74PfVd1o7JsJ6mIH3FSm6YU2C2L60o0BTl3Mbw==</ds:SignatureValue>
+    <ds:KeyInfo>
+      <ds:X509Data>
+        <ds:X509Certificate>MIIFODCCAyCgAwIBAgIGAW55vA2eMA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkNSMR8wHQYDVQQKDBZNSU5JU1RFUklPIERFIEhBQ0lFTkRBMQwwCgYDVQQLDANER1QxHDAaBgNVBAMME0NBIFBFUlNPTkEgSlVSSURJQ0EwHhcNMTkxMTE3MTQxOTU3WhcNMjExMTE2MTQxOTU3WjCBkjEZMBcGA1UEBRMQQ1BKLTMtMTAyLTAyMDYyOTELMAkGA1UEBhMCQ1IxGTAXBgNVBAoMEFBFUlNPTkEgSlVSSURJQ0ExDDAKBgNVBAsMA0NQSjE/MD0GA1UEAww2UkVTVEFVUkFOVEVTIFNVQlMgU09DSUVEQUQgREUgUkVTUE9OU0FCSUxJREFEIExJTUlUQURBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjEOhx/4p//WzFhV3k1IrPCWYtIj/eXtbXJMO8Y7L6rTQp7Pg6WVR46dkEi+qCYXYeZyyHhAFGfmBCeeZHr1ANCEKtlxi6VIFN76soEQNkK190qaqJRmYfC+2P6K23UwAic+Oxpnqfn151AGVlzumZOUavoK8IG0z1zeDwq42WeKo+J3ZHO2KNbYAB08GhS7qCKaC3gJOghvYPo6R8kKSSVtYboy/hTRlvaL7dbt6jY5TGVbDb03vSrY47w1cVPEa0q2I0Nfz3J9FaMfl5fl3wmUaFZqA4FaIBQtKKoiJCuuLg53QO2ISIzhpEnumctUkPZ6ZYpv5jiUVlruNwYnjnQIDAQABo4HKMIHHMB8GA1UdIwQYMBaAFDttV/XWfOmeEAIgQeO9GszPs06VMB0GA1UdDgQWBBQwNuhOJfXShaB5J3qMUeH1nP9jwTALBgNVHQ8EBAMCBsAwEwYDVR0lBAwwCgYIKwYBBQUHAwQwYwYIKwYBBQUHAQEEVzBVMFMGCCsGAQUFBzAChkdodHRwczovL3BraS5jb21wcm9iYW50ZXNlbGVjdHJvbmljb3MuZ28uY3IvcHJvZC9pbnRlcm1lZGlhdGUtcGotcGVtLmNydDANBgkqhkiG9w0BAQsFAAOCAgEAOSNj9DZiEz8TBY31+qXYa2wlFkZrPj4Q2KWmSfSdFILZ2pFozMNEifW1uimjauiei6cOMx8QwPcKpqjerPaWv16QjQ6Z1pvkhJ0v0QarrahPGQTS8bYm+D4nb5xImwwQkFVP4b3CH70eg3AX8tk0PwXb7D1h0d8vWUP7zRYcdYT6xO2Enb25/Ay0C4WpyrkETqnbZiXrF6fGsiMDQ0WPYMS2hRWHJmVqS5zpRAhAtO4jDBjuWw8tExhKk2PhXfzh1K3W2/PKwYDws1tzZeQWPKqbrZDDx6AS60EnJ6cIrUkodeSE0QapH0XMIcIHoSV6t2/SnwLTWIHC8eEnQTCnyl/75YLDLRifywdMOUycZVtZR1WkXbVNGTjKYtsK97VcXgmpr5ri3CvOKdPZTo+sVnQUO9e7NP4ZOWbkFhb0JedVzkGANAKS7q/Laiv8K/EAmg1oaNGrpR3ponLjQkSaiJIHqpLOpTCG+pS93x0qCWO7mXRYaJ+B/cqnVKgGd5QVm4QzMibsavxSA99KB0zU/MMm9duC9Dl2GK32w/h94PSaqdnKjJUXcPyeeLJtc47BVRGSPQG41o79K8hzj70RPlFUso+lwgzZ7GCVkly5N+a6TyAzToVNlRrMSGNEK8yZSdtWoIlBZECavyw4XQx0YI1t4T94zm+SSHANFQ4HGqY=</ds:X509Certificate>
+      </ds:X509Data>
+    </ds:KeyInfo>
+    <ds:Object>
+      <xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature-3c14f991-9d45-448a-948c-291d3bd92a68">
+        <xades:SignedProperties Id="SignedProperties-Signature-3c14f991-9d45-448a-948c-291d3bd92a68">
+          <xades:SignedSignatureProperties>
+            <xades:SigningTime>2020-02-10T12:04:35-06:00</xades:SigningTime>
+            <xades:SigningCertificate>
+              <xades:Cert>
+                <xades:CertDigest>
+                  <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                  <ds:DigestValue>oMIaI96OWj3Yp6/1IzoW01+8W60Mn8ZfoEJe3DaXb3s=</ds:DigestValue>
+                </xades:CertDigest>
+                <xades:IssuerSerial>
+                  <ds:X509IssuerName>CN=CA PERSONA JURIDICA, OU=DGT, O=MINISTERIO DE HACIENDA, C=CR</ds:X509IssuerName>
+                  <ds:X509SerialNumber>1574000397726</ds:X509SerialNumber>
+                </xades:IssuerSerial>
+              </xades:Cert>
+            </xades:SigningCertificate>
+            <xades:SignaturePolicyIdentifier>
+              <xades:SignaturePolicyId>
+                <xades:SigPolicyId>
+                  <xades:Identifier>https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4.2/ResolucionComprobantesElectronicosDGT-R-48-2016_4.2.pdf</xades:Identifier>
+                  <xades:Description />
+                </xades:SigPolicyId>
+                <xades:SigPolicyHash>
+                  <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                  <ds:DigestValue>NmI5Njk1ZThkNzI0MmIzMGJmZDAyNDc4YjUwNzkzODM2NTBiOWUxNTBkMmI2YjgzYzZjM2I5NTZlNDQ4OWQzMQ==</ds:DigestValue>
+                </xades:SigPolicyHash>
+              </xades:SignaturePolicyId>
+            </xades:SignaturePolicyIdentifier>
+          </xades:SignedSignatureProperties>
+          <xades:SignedDataObjectProperties>
+            <xades:DataObjectFormat ObjectReference="#Reference-80a6486a-d00c-4728-baee-300f075df845">
+              <xades:MimeType>application/octet-stream</xades:MimeType>
+            </xades:DataObjectFormat>
+          </xades:SignedDataObjectProperties>
+        </xades:SignedProperties>
+      </xades:QualifyingProperties>
+    </ds:Object>
+  </ds:Signature>
+</FacturaElectronica>

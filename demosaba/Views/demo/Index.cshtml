@@ -1,0 +1,315 @@
+﻿@model IPagedList<demosaba.Models.MVClass>
+
+@{ ViewBag.Title = "Index"; }
+
+
+@using PagedList.Mvc;
+@using PagedList;
+
+<style>
+    #tablita {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+    }
+</style>
+
+
+    <h2>Lista de facturas Coris</h2>
+    <div>
+       
+        <p>
+            @using (Html.BeginForm("Index", "demo", FormMethod.Post))
+            {
+
+                if (ViewBag.CurrentFilter != null)
+                {
+                <input type="date" name="start" value="@ViewBag.CurrentFilter" />
+                 <input type="date" name="end" value="@ViewBag.CurrentFilter2" />
+                 <select name="CIAS" id="cias">
+                    
+                     <option value="CVET">CVET</option>
+                     <option value="COOK">COOK</option>
+                     <option value="CRCB">CRCB</option>
+                     <option value="RBA">RBA</option>
+                 </select>
+                 <input type="checkbox" id="errors" name="sinfiltros" value="Si" checked="checked" />
+                  <label for="sinfiltros"> Sin filtros </label><br />  
+                        <table id="tablita">
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="errors" name="errors" value="Si" />
+                                    <label for="Error"> Error </label><br />
+
+                                </th>
+                                <th>
+                                    <input type="checkbox" id="errorw" name="errorw" value="Si" />
+                                    <label for="ErrorW"> Error Web </label><br />
+                                </th>
+                                <th>
+                                    <input type="checkbox" id="errorsoftland" name="errorsoftland" value="Si" />
+                                    <label for="ErrorS"> Error Softland </label><br />
+                                </th>
+                                <th>
+                                    <input type="checkbox" id="enviado" name="enviado" checked="checked" value="Si" />
+                                    <label for="enviado"> Enviado</label><br />
+                                </th>
+                                <th>
+                                    <select name="estadof" id="estadof">
+                                        <option value="ACEPTADO">Aceptado</option>
+                                        <option value="PENDIENTE">Pendiente</option>
+                                        <option value="RECHAZADO">Rechazado</option>
+
+                                    </select>
+                                </th>
+
+                            </tr>
+                        </table>
+                 <input type="submit" name="submit" value="Buscar" class="btn btn-success"/> }
+                else
+                {
+                    <input type="date" name="start" required=required />
+                    <input type="date" name="end" required=required />
+                    <select name="CIAS" id="cias" >
+
+                         <option value="CVET">CVET</option>
+                         <option value="COOK">COOK</option>
+                         <option value="CRCB">CRCB</option>
+                         <option value="RBA">RBA</option>
+                 </select>
+                 <input type="checkbox" id="errors" name="sinfiltros" value="Si" checked="checked"/>
+                  <label for="sinfiltros"> Sin filtros </label><br />  
+                        
+                        <table id="tablita">
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="errors" name="errors" value="Si" />
+                                    <label for="Error"> Error </label><br />
+
+                                </th>
+                                <th>
+                                    <input type="checkbox" id="errorw" name="errorw" value="Si" />
+                                    <label for="ErrorW"> Error Web </label><br />
+                                </th>
+                                <th>
+                                    <input type="checkbox" id="errorsoftland" name="errorsoftland" value="Si" />
+                                    <label for="ErrorS"> Error Softland </label><br />
+                                </th>
+                                <th>
+                                    <input type="checkbox" id="enviado" name="enviado" checked="checked" value="Si" />
+                                    <label for="enviado"> Enviado</label><br />
+                                </th>
+                                <th>
+                                    <select name="estadof" id="estadof">
+                                        <option value="ACEPTADO">Aceptado</option>
+                                        <option value="PENDIENTE">Pendiente</option>
+                                        <option value="RECHAZADO">Rechazado</option>
+
+                                    </select>
+                                </th>
+
+                            </tr>
+                        </table>
+                    <input type="submit" name="submit" value="Buscar" class="btn btn-success" />
+                }
+
+
+                                                    }
+        </p>
+    </div>
+ 
+      <div style="margin-left:0px" class="container-fluid">
+        <table id="tabla" class="table" >
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().DOCUMENTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().CLIENTE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().FECHA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().NOMBRE)
+                    <span style="color:white">
+                        ...........................................................................................................
+                    </span>
+                </th>
+               
+                <th>
+                    @Html.DisplayNameFor(model => model.First().NIT_RECEPTOR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().CLAVE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().CODIGO_MONEDA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TOTALGRAVADO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TOTALEXENTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TOTALDESCUENTOS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TOTALIMPUESTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TOTALCOMPROBANTE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().CONTIENE_ERRORES)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ERROR_WS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ERROR_SOFTLAND)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ENVIADO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ACEPTADO)
+                </th>
+                <th>
+                    CIA
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().RESPUESTA_XML)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().PDF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().XML)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOCUMENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLIENTE)
+            </td>
+            <td>
+                @Convert.ToDateTime(item.FECHA).ToString("dd/MM/yyyy")
+            </td>
+            <td class="w-25">
+
+                @Html.DisplayFor(modelItem => item.NOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NIT_RECEPTOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLAVE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CODIGO_MONEDA)
+            </td>
+            <td>
+                @if (item.TOTALGRAVADO == "")
+                {
+
+                }
+                else
+                {
+            @String.Format("{0:n}", Convert.ToDecimal(item.TOTALGRAVADO))
+                }
+            </td>
+            <td>
+                @if (item.TOTALGRAVADO == "")
+                {
+
+                }
+                else
+                {
+            @String.Format("{0:n}", Convert.ToDecimal(item.TOTALEXENTO))
+                }
+          </td>
+            <td>
+                @if (item.TOTALGRAVADO == "")
+                {
+
+                }
+                else
+                {
+            @String.Format("{0:n}", Convert.ToDecimal(item.TOTALDESCUENTOS))
+                }
+           </td>
+            <td>
+                @if (item.TOTALGRAVADO == "")
+                {
+
+                }
+                else
+                {
+            @String.Format("{0:n}", Convert.ToDecimal(item.TOTALIMPUESTO))
+                }
+           </td>
+            <td>
+                @if (item.TOTALGRAVADO == "")
+                {
+
+                }
+                else
+                {
+            @String.Format("{0:n}", Convert.ToDecimal(item.TOTALCOMPROBANTE))
+                }
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.CONTIENE_ERRORES)
+
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ERROR_WS)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ERROR_SOFTLAND)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENVIADO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACEPTADO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CIA)
+            </td>
+            <td>
+
+                <a class="btn btn-success" href="Facturas/@item.RESPUESTA_XML" target="_blank">Respuesta XML</a>
+
+            </td>
+
+            <td>
+
+                <a class="btn btn-success" href="Facturas/@item.PDF" target="_blank">PDF</a>
+
+            </td>
+            <td>
+
+                <a class="btn btn-success" href="Facturas/@item.XML" target="_blank">XML</a>
+
+
+        </tr>}
+
+        </table>
+   
+       </div>
+
+@Html.PagedListPager(Model, i => Url.Action("Index", new { i, currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.sortOrder }))

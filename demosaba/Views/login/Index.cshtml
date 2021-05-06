@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+<style>
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+    }
+    #redondeado {
+        border-radius: 2em;
+    }
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .closebtn:hover {
+            color: black;
+        }
+</style>
+<!--start-login-form-->
+<div class="login-form" id="redondeado">
+
+    <h1>Coris login</h1>
+    <form action="@Url.Content("~/login/Verificar")" method="post">
+        <div class="form-group">
+
+            <input name="name" type="text" class="user" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" />
+        </div>
+        <div class="form-group">
+
+            <input name="password" type="password" class="lock" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Entrar" class="btn btn-success" />
+
+        </div>
+
+
+    </form>
+
+    <div class="has-error">
+        @{
+            if (ViewBag.error == null)
+            {
+
+            }
+            else
+            {
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Usuario o contraseña incorrecta</strong> Intente de nuevo.
+                </div>
+
+            }
+
+
+        }
+
+    </div>
+    <!---start-copy-right---->
+    <div class="copy-right" style="display:none">
+        <p>Template by <a href="http://w3layouts.com/" style="display:none">W3layouts </a></p>
+    </div>
+    <!---End-copy-right---->
+</div>
+<!--//End-login-form-->
